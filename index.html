@@ -1,15 +1,543 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Julen Caipa| Portafolio</title>
-    <script type="module" crossorigin src="/assets/index-588ed3e0.js"></script>
-    <link rel="stylesheet" href="/assets/index-d3b7be40.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julen Caipa — Analytics Engineer</title>
+  <meta name="description" content="Julen Caipa — Analytics Engineer & Data Engineer in Bogotá, Colombia. Snowflake, ETL/ELT pipelines, data modeling, BI and AI agents." />
+  <meta property="og:title" content="Julen Caipa — Analytics Engineer" />
+  <meta property="og:description" content="Snowflake data warehouses, ETL/ELT pipelines, semantic layers, BI and AI agents." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e1013" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script>
+    // Pick the language before first paint: ?lang= > saved choice > browser language.
+    (function () {
+      var lang;
+      try {
+        lang = new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang');
+      } catch (e) {}
+      if (lang !== 'es' && lang !== 'en') lang = /^es\b/i.test(navigator.language || '') ? 'es' : 'en';
+      document.documentElement.dataset.lang = lang;
+      document.documentElement.lang = lang;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57l-.02-2.04c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.02 3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></g></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></g></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></g></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></g></symbol>
+  </svg>
+
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Julen Caipa">
+        <span class="brand-mark">JC</span>
+        <span class="brand-name">Julen Caipa</span>
+      </a>
+      <nav aria-label="Sections">
+        <ul class="nav-links">
+          <li><a href="#experience"><span lang="en">Experience</span><span lang="es">Experiencia</span></a></li>
+          <li><a href="#projects"><span lang="en">Projects</span><span lang="es">Proyectos</span></a></li>
+          <li><a href="#skills"><span lang="en">Skills</span><span lang="es">Habilidades</span></a></li>
+          <li><a href="#certifications"><span lang="en">Certifications</span><span lang="es">Certificaciones</span></a></li>
+          <li><a href="#contact"><span lang="en">Contact</span><span lang="es">Contacto</span></a></li>
+        </ul>
+      </nav>
+      <button class="lang-toggle" type="button" id="lang-toggle" aria-label="Cambiar idioma / Change language">
+        <span data-v="es">ES</span><span data-v="en">EN</span>
+      </button>
+      <a class="btn btn-sm btn-primary" href="https://www.linkedin.com/in/julen-daniel-caipa-garces/" target="_blank" rel="noopener">
+        <svg class="icon"><use href="#i-linkedin"/></svg><span class="hide-xs">LinkedIn</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero container">
+      <p class="eyebrow"><svg class="icon"><use href="#i-pin"/></svg>Bogotá, Colombia</p>
+      <h1>Julen Caipa</h1>
+      <p class="role">Analytics Engineer <span>·</span> Data Engineer <span>·</span> Business Intelligence</p>
+      <p class="lead" lang="en">
+        I design <strong>Snowflake</strong> data warehouses, build <strong>ETL/ELT pipelines</strong> with Python and SQL,
+        and model the semantic layers that deliver business-ready data to BI tools — plus <strong>AI agents and RAG
+        pipelines</strong> on top of them.
+      </p>
+      <p class="lead" lang="es">
+        Diseño data warehouses en <strong>Snowflake</strong>, construyo <strong>pipelines ETL/ELT</strong> con Python y SQL
+        y modelo las capas semánticas que entregan datos listos para el negocio a las herramientas de BI — además de
+        <strong>agentes de IA y pipelines RAG</strong> sobre ellas.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/julen-daniel-caipa-garces/" target="_blank" rel="noopener">
+          <svg class="icon"><use href="#i-linkedin"/></svg><span lang="en">View LinkedIn</span><span lang="es">Ver LinkedIn</span>
+        </a>
+        <a class="btn" href="/hv/Julen_Caipa_CV.pdf" target="_blank" rel="noopener">
+          <svg class="icon"><use href="#i-download"/></svg><span lang="en">Download CV</span><span lang="es">Descargar CV</span>
+        </a>
+        <a class="btn btn-ghost" href="mailto:caipajulen@gmail.com">
+          <svg class="icon"><use href="#i-mail"/></svg>caipajulen@gmail.com
+        </a>
+      </div>
+
+      <dl class="stats">
+        <div>
+          <dt><span lang="en">5+ years</span><span lang="es">5+ años</span></dt>
+          <dd><span lang="en">working with data</span><span lang="es">trabajando con datos</span></dd>
+        </div>
+        <div>
+          <dt><span lang="en">3 companies</span><span lang="es">3 empresas</span></dt>
+          <dd>AntPack · SLB · R&amp;G</dd>
+        </div>
+        <div>
+          <dt><span lang="en">8 certifications</span><span lang="es">8 certificaciones</span></dt>
+          <dd>IBM, UC Davis, Johns Hopkins</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Focus areas -->
+    <section class="container section" aria-labelledby="focus-title">
+      <h2 id="focus-title" class="section-title"><span lang="en">What I do</span><span lang="es">Qué hago</span></h2>
+      <div class="focus-grid">
+        <article class="card">
+          <h3><span lang="en">Data warehousing &amp; modeling</span><span lang="es">Data warehousing y modelado</span></h3>
+          <p lang="en">Schema design, ingestion of structured and unstructured data, data models and semantic layers in Snowflake.</p>
+          <p lang="es">Diseño de esquemas, ingesta de datos estructurados y no estructurados, modelos de datos y capas semánticas en Snowflake.</p>
+        </article>
+        <article class="card">
+          <h3><span lang="en">Pipelines &amp; automation</span><span lang="es">Pipelines y automatización</span></h3>
+          <p lang="en">ETL/ELT with Python and SQL connecting HubSpot, Salesforce, Google &amp; Adobe Analytics, plus workflow automation.</p>
+          <p lang="es">ETL/ELT con Python y SQL conectando HubSpot, Salesforce, Google y Adobe Analytics, además de automatización de flujos.</p>
+        </article>
+        <article class="card">
+          <h3><span lang="en">BI, ML &amp; AI</span><span lang="es">BI, ML e IA</span></h3>
+          <p lang="en">Power BI and Looker dashboards, predictive models in Python and Dataiku, AI agents and RAG on Snowflake.</p>
+          <p lang="es">Dashboards en Power BI y Looker, modelos predictivos en Python y Dataiku, agentes de IA y RAG en Snowflake.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="container section" aria-labelledby="exp-title">
+      <h2 id="exp-title" class="section-title"><span lang="en">Experience</span><span lang="es">Experiencia</span></h2>
+
+      <ol class="timeline">
+        <li class="job">
+          <div class="job-meta">
+            <span class="job-date"><span lang="en">Apr 2025 — Present</span><span lang="es">Abr 2025 — Actualidad</span></span>
+            <span class="job-place">Bogotá, Colombia</span>
+          </div>
+          <div class="job-body">
+            <h3><span lang="en">Data Analyst</span><span lang="es">Analista de Datos</span> <span class="muted">· SQL &amp; Snowflake</span></h3>
+            <p class="company">AntPack</p>
+            <div class="clients">
+              <span class="clients-label"><span lang="en">Clients</span><span lang="es">Clientes</span></span>
+              <div class="brands">
+                <span class="brand-chip"><img src="/logos/under-armour.svg" alt="" /><span class="brand-name">Under Armour</span></span>
+                <span class="brand-chip"><img src="/logos/puma.svg" alt="" /><span class="brand-name">PUMA</span></span>
+                <span class="brand-chip"><img src="/logos/terpel.png" alt="Terpel" /></span>
+                <span class="brand-chip"><img src="/logos/cusezar.svg" alt="Cusezar" /></span>
+                <span class="brand-chip brand-text">Clic</span>
+              </div>
+            </div>
+            <ul>
+              <li lang="en">Architect and administer Snowflake warehouses end to end — schemas, tables and ingestion of structured and unstructured files from multiple sources.</li>
+              <li lang="es">Diseño y administro data warehouses en Snowflake de punta a punta — esquemas, tablas e ingesta de archivos estructurados y no estructurados de múltiples fuentes.</li>
+              <li lang="en">Built Under Armour’s data pipeline: ETL in Python and SQL Server integrating HubSpot, Salesforce, Google Analytics, Adobe Analytics and Semrush APIs.</li>
+              <li lang="es">Construí el pipeline de datos de Under Armour: ETL en Python y SQL Server integrando las APIs de HubSpot, Salesforce, Google Analytics, Adobe Analytics y Semrush.</li>
+              <li lang="en">Build semantic and analytical layers that feed BI dashboards, and metadata tagging frameworks that improve data governance.</li>
+              <li lang="es">Construyo capas semánticas y analíticas que alimentan los dashboards de BI, y esquemas de etiquetado de metadatos que mejoran el gobierno de datos.</li>
+              <li lang="en">Build and deploy AI agents and RAG pipelines on Snowflake for Under Armour, for data retrieval and decision support.</li>
+              <li lang="es">Desarrollo y despliego agentes de IA y pipelines RAG en Snowflake para Under Armour, para recuperación de información y apoyo a decisiones.</li>
+              <li lang="en">Deliver Power BI and Looker Studio dashboards, ML models in Python and Dataiku, and Salesforce Marketing Cloud campaigns for Terpel.</li>
+              <li lang="es">Entrego dashboards en Power BI y Looker Studio, modelos de ML en Python y Dataiku, y campañas en Salesforce Marketing Cloud para Terpel.</li>
+            </ul>
+            <ul class="tags" aria-label="Tools">
+              <li>Snowflake</li><li>SQL Server</li><li>Python</li><li>Power BI</li><li>Looker Studio</li><li>Dataiku</li><li>Salesforce MC</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job">
+          <div class="job-meta">
+            <span class="job-date">Feb 2024 — Feb 2025</span>
+            <span class="job-place">Cota, Colombia</span>
+          </div>
+          <div class="job-body">
+            <h3><span lang="en">Supply Chain Data Analyst <span class="muted">· Internship</span></span><span lang="es">Analista de Datos de Supply Chain <span class="muted">· Práctica</span></span></h3>
+            <p class="company"><span class="brand-chip brand-sm"><img src="/logos/slb.png" alt="" /></span>SLB</p>
+            <ul>
+              <li lang="en">Designed interactive Power BI dashboards supporting strategic decisions in the Supply Chain department.</li>
+              <li lang="es">Diseñé dashboards interactivos en Power BI para apoyar decisiones estratégicas del área de Supply Chain.</li>
+              <li lang="en">Automated data management and cleaning in Python to keep data accurate and consistent.</li>
+              <li lang="es">Automaticé la gestión y limpieza de datos en Python para mantenerlos precisos y consistentes.</li>
+              <li lang="en">Wrote analysis scripts over large datasets to surface insights for key business decisions.</li>
+              <li lang="es">Desarrollé scripts de análisis sobre grandes volúmenes de datos para extraer insights clave para el negocio.</li>
+              <li lang="en">Built Power Automate workflows and PowerApps applications to streamline operational tasks.</li>
+              <li lang="es">Construí flujos en Power Automate y aplicaciones en PowerApps para agilizar tareas operativas.</li>
+            </ul>
+            <ul class="tags" aria-label="Tools">
+              <li>Power BI</li><li>Python</li><li>Power Automate</li><li>PowerApps</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job">
+          <div class="job-meta">
+            <span class="job-date"><span lang="en">Jun 2021 — Dec 2023</span><span lang="es">Jun 2021 — Dic 2023</span></span>
+            <span class="job-place">Bogotá, Colombia</span>
+          </div>
+          <div class="job-body">
+            <h3>Data Engineer <span class="muted">· <span lang="en">Developer, Process Automation</span><span lang="es">Desarrollador, Automatización de Procesos</span></span></h3>
+            <p class="company"><span class="brand-chip brand-sm"><img src="/logos/rg.png" alt="" /></span>Promotora Inmobiliaria R&amp;G</p>
+            <ul>
+              <li lang="en">Built Python automation pipelines for lease agreements and penalty clause calculations, cutting manual work and ensuring compliance.</li>
+              <li lang="es">Construí automatizaciones en Python para contratos de arrendamiento y cálculo de cláusulas penales, reduciendo trabajo manual y asegurando el cumplimiento normativo.</li>
+              <li lang="en">Supported cloud migration on AWS (S3, Lambda) and integrated data with Google Cloud (Firestore, Sheets API, Analytics).</li>
+              <li lang="es">Apoyé la migración a la nube en AWS (S3, Lambda) e integré datos con Google Cloud (Firestore, Sheets API, Analytics).</li>
+              <li lang="en">Engineered a property inventory system with Flutter and Firebase for real-time availability tracking.</li>
+              <li lang="es">Desarrollé un sistema de inventario de inmuebles con Flutter y Firebase para seguir su disponibilidad en tiempo real.</li>
+              <li lang="en">Wrote SQL reports for operational visibility and containerized applications with Docker.</li>
+              <li lang="es">Creé reportes en SQL para dar visibilidad operativa y empaqueté aplicaciones en contenedores Docker.</li>
+            </ul>
+            <ul class="tags" aria-label="Tools">
+              <li>Python</li><li>AWS</li><li>Google Cloud</li><li>SQL</li><li>Docker</li><li>Flutter</li><li>Firebase</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container section" aria-labelledby="proj-title">
+      <h2 id="proj-title" class="section-title"><span lang="en">Projects</span><span lang="es">Proyectos</span></h2>
+      <p class="section-intro" lang="en">Short briefs of work I've built — what it is, how it works and the stack behind it.</p>
+      <p class="section-intro" lang="es">Resúmenes cortos de lo que he construido — qué es, cómo funciona y con qué tecnologías.</p>
+
+      <div class="project-grid">
+        <article class="project featured">
+          <div class="project-head">
+            <p class="project-label">AntPack · 2025</p>
+            <div class="brands"><span class="brand-chip"><img src="/logos/under-armour.svg" alt="" /><span class="brand-name">Under Armour</span></span></div>
+          </div>
+          <h3><span lang="en">Under Armour data platform</span><span lang="es">Plataforma de datos para Under Armour</span></h3>
+          <p lang="en">An end-to-end data pipeline that takes marketing and CRM data from five sources into Snowflake and a semantic layer ready for BI.</p>
+          <p lang="es">Un pipeline de datos de punta a punta que lleva la información de marketing y CRM de cinco fuentes a Snowflake y a una capa semántica lista para BI.</p>
+          <ol class="flow" aria-label="Data flow">
+            <li><span lang="en">5 CRM &amp; marketing APIs</span><span lang="es">5 APIs de CRM y marketing</span></li>
+            <li>ETL · Python + SQL Server</li>
+            <li>Snowflake</li>
+            <li><span lang="en">Semantic layer</span><span lang="es">Capa semántica</span></li>
+            <li>Power BI · Looker Studio</li>
+          </ol>
+          <ul class="project-points">
+            <li lang="en">Ingestion from HubSpot, Salesforce, Google Analytics, Adobe Analytics and Semrush, plus structured and unstructured files.</li>
+            <li lang="es">Ingesta desde HubSpot, Salesforce, Google Analytics, Adobe Analytics y Semrush, además de archivos estructurados y no estructurados.</li>
+            <li lang="en">Warehouse, schemas and data models in Snowflake, with a semantic layer as the single source for reporting.</li>
+            <li lang="es">Warehouse, esquemas y modelos de datos en Snowflake, con una capa semántica como fuente única para los reportes.</li>
+            <li lang="en">Metadata tagging and classification for governance and discoverability.</li>
+            <li lang="es">Etiquetado y clasificación de metadatos para gobierno y descubrimiento de datos.</li>
+          </ul>
+          <ul class="tags"><li>Snowflake</li><li>Python</li><li>SQL Server</li><li>HubSpot</li><li>Salesforce</li></ul>
+        </article>
+
+        <article class="project featured">
+          <div class="project-head">
+            <p class="project-label">AntPack · 2025</p>
+            <div class="brands"><span class="brand-chip"><img src="/logos/under-armour.svg" alt="" /><span class="brand-name">Under Armour</span></span></div>
+          </div>
+          <h3><span lang="en">AI agents &amp; RAG for Under Armour</span><span lang="es">Agentes de IA y RAG para Under Armour</span></h3>
+          <p lang="en">AI agents and retrieval-augmented generation pipelines built directly on the Snowflake warehouse, giving teams contextual answers over business data.</p>
+          <p lang="es">Agentes de IA y pipelines de generación aumentada por recuperación (RAG) construidos directamente sobre el warehouse en Snowflake, para dar respuestas con contexto sobre los datos del negocio.</p>
+          <ul class="project-points">
+            <li lang="en">RAG pipelines over the structured and unstructured data ingested into Snowflake.</li>
+            <li lang="es">Pipelines RAG sobre los datos estructurados y no estructurados ingeridos en Snowflake.</li>
+            <li lang="en">Agents that automate data retrieval, decision support and business process workflows.</li>
+            <li lang="es">Agentes que automatizan la consulta de datos, el apoyo a decisiones y flujos de procesos del negocio.</li>
+          </ul>
+          <ul class="tags"><li>Snowflake</li><li>RAG</li><li>AI agents</li><li>Python</li><li>SQL</li></ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <p class="project-label">AntPack · 2025</p>
+          </div>
+          <div class="brands">
+            <span class="brand-chip"><img src="/logos/puma.svg" alt="" /><span class="brand-name">PUMA</span></span>
+            <span class="brand-chip"><img src="/logos/cusezar.svg" alt="Cusezar" /></span>
+            <span class="brand-chip brand-text">Clic</span>
+          </div>
+          <h3><span lang="en">Marketing KPI dashboards</span><span lang="es">Dashboards de KPIs de marketing</span></h3>
+          <p lang="en">Interactive dashboards to monitor traffic sources, SEO performance, customer acquisition and conversion rates.</p>
+          <p lang="es">Dashboards interactivos para monitorear fuentes de tráfico, rendimiento SEO, adquisición de clientes y tasas de conversión.</p>
+          <ul class="tags"><li>Power BI</li><li>Looker Studio</li></ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <p class="project-label">AntPack · 2025</p>
+          </div>
+          <div class="brands">
+            <span class="brand-chip"><img src="/logos/cusezar.svg" alt="Cusezar" /></span>
+            <span class="brand-chip brand-text">Clic</span>
+          </div>
+          <h3><span lang="en">Customer trend prediction</span><span lang="es">Predicción de tendencias de clientes</span></h3>
+          <p lang="en">Machine learning models that predict customer trends, engagement patterns and social media growth.</p>
+          <p lang="es">Modelos de machine learning que predicen tendencias de clientes, patrones de interacción y crecimiento en redes sociales.</p>
+          <ul class="project-points">
+            <li lang="en">Data cleaning, feature engineering and model validation.</li>
+            <li lang="es">Limpieza de datos, ingeniería de variables y validación de modelos.</li>
+          </ul>
+          <ul class="tags"><li>Python</li><li>Dataiku</li><li>Machine Learning</li></ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <p class="project-label">AntPack · 2025</p>
+          </div>
+          <div class="brands"><span class="brand-chip"><img src="/logos/terpel.png" alt="Terpel" /></span></div>
+          <h3><span lang="en">CRM segmentation for Terpel</span><span lang="es">Segmentación CRM para Terpel</span></h3>
+          <p lang="en">Customer data organized in Salesforce Marketing Cloud data extensions to segment audiences and target campaigns.</p>
+          <p lang="es">Datos de clientes organizados en data extensions de Salesforce Marketing Cloud para segmentar audiencias y dirigir campañas.</p>
+          <ul class="tags"><li>Salesforce Marketing Cloud</li><li>CRM</li></ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <p class="project-label">2024</p>
+          </div>
+          <div class="brands"><span class="brand-chip"><img src="/logos/slb.png" alt="SLB" /></span></div>
+          <h3><span lang="en">Supply chain dashboards &amp; automation</span><span lang="es">Dashboards y automatización de supply chain</span></h3>
+          <p lang="en">Power BI reporting plus low-code tools for the Supply Chain department.</p>
+          <p lang="es">Reportes en Power BI y herramientas low-code para el área de Supply Chain.</p>
+          <ul class="project-points">
+            <li lang="en">Dashboards for strategic decisions and Python scripts that clean and validate data.</li>
+            <li lang="es">Dashboards para decisiones estratégicas y scripts en Python que limpian y validan los datos.</li>
+            <li lang="en">Power Automate flows and PowerApps apps for day-to-day operational tasks.</li>
+            <li lang="es">Flujos en Power Automate y apps en PowerApps para tareas operativas del día a día.</li>
+          </ul>
+          <ul class="tags"><li>Power BI</li><li>Python</li><li>Power Automate</li><li>PowerApps</li></ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <p class="project-label">2021 — 2023</p>
+            <a class="project-link" href="https://github.com/JulenCaipa/Inventarios" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a>
+          </div>
+          <div class="brands"><span class="brand-chip"><img src="/logos/rg.png" alt="Promotora Inmobiliaria R&amp;G" /><span class="brand-name">Promotora Inmobiliaria R&amp;G</span></span></div>
+          <h3><span lang="en">Contract &amp; handover document generator</span><span lang="es">Generador de contratos y actas</span></h3>
+          <p lang="en">Desktop app that turns a simple form into the Word contracts and reports the real estate team works with.</p>
+          <p lang="es">App de escritorio que convierte un formulario sencillo en los contratos y actas en Word que usa el equipo inmobiliario.</p>
+          <ul class="project-points">
+            <li lang="en">Lease contracts with configurable clauses, including late-payment penalties.</li>
+            <li lang="es">Contratos de arrendamiento con cláusulas configurables, incluidas las penalidades por mora.</li>
+            <li lang="en">Property handover, return and pre-visit reports, packaged as a standalone executable.</li>
+            <li lang="es">Actas de entrega, restitución y pre-visita, empaquetadas como un ejecutable independiente.</li>
+          </ul>
+          <ul class="tags"><li>Python</li><li>CustomTkinter</li><li>python-docx</li><li>PyInstaller</li></ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <p class="project-label">2021 — 2023</p>
+          </div>
+          <div class="brands"><span class="brand-chip"><img src="/logos/rg.png" alt="Promotora Inmobiliaria R&amp;G" /><span class="brand-name">Promotora Inmobiliaria R&amp;G</span></span></div>
+          <h3><span lang="en">Real-time property inventory</span><span lang="es">Inventario de inmuebles en tiempo real</span></h3>
+          <p lang="en">Mobile app to track the availability and operational status of every property in real time.</p>
+          <p lang="es">App móvil para seguir en tiempo real la disponibilidad y el estado operativo de cada inmueble.</p>
+          <ul class="tags"><li>Flutter</li><li>Firebase</li><li>Firestore</li></ul>
+        </article>
+
+        <article class="project featured">
+          <div class="project-head">
+            <p class="project-label"><span lang="en">Personal project</span><span lang="es">Proyecto personal</span></p>
+            <a class="project-link" href="https://github.com/JulenCaipa/Proyecto-6---An-lisis-de-una-empresa-de-telecomunicaciones" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a>
+          </div>
+          <h3><span lang="en">Telecom customer analysis</span><span lang="es">Análisis de clientes de una telco</span></h3>
+          <p lang="en">Exploratory analysis of 4,000 customers and 40,000 usage records of a telecom operator in Mexico and Colombia.</p>
+          <p lang="es">Análisis exploratorio de 4.000 clientes y 40.000 registros de uso de un operador de telecomunicaciones en México y Colombia.</p>
+          <ul class="project-points">
+            <li lang="en">Data-quality fixes, IQR outlier detection and segmentation by usage and age.</li>
+            <li lang="es">Corrección de calidad de datos, detección de outliers con IQR y segmentación por uso y edad.</li>
+            <li lang="en">Finding: the Premium plan doesn’t translate into higher usage — offers should be designed around consumption.</li>
+            <li lang="es">Hallazgo: el plan Premium no se traduce en mayor uso — las ofertas deberían diseñarse según el consumo.</li>
+          </ul>
+          <ul class="tags"><li>Python</li><li>pandas</li><li>seaborn</li><li>Jupyter</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="container section" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title"><span lang="en">Skills</span><span lang="es">Habilidades</span></h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Data warehousing</h3>
+          <ul class="tags"><li>Snowflake</li><li>Schema design</li><li>Semantic layers</li><li>Data tagging</li><li>AI agents</li><li>RAG</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span lang="en">SQL &amp; data modeling</span><span lang="es">SQL y modelado</span></h3>
+          <ul class="tags"><li>SQL Server</li><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>ETL/ELT</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span lang="en">Programming</span><span lang="es">Programación</span></h3>
+          <ul class="tags"><li>Python</li><li>SQL</li><li>R</li><li>JavaScript</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud &amp; DevOps</h3>
+          <ul class="tags"><li>AWS S3</li><li>AWS Lambda</li><li>Google Cloud</li><li>Firestore</li><li>Docker</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span lang="en">BI &amp; visualization</span><span lang="es">BI y visualización</span></h3>
+          <ul class="tags"><li>Power BI</li><li>Tableau</li><li>Looker</li><li>Looker Studio</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span lang="en">Data sources &amp; CRM</span><span lang="es">Fuentes de datos y CRM</span></h3>
+          <ul class="tags"><li>Salesforce Marketing Cloud</li><li>HubSpot</li><li>Google Analytics</li><li>Adobe Analytics</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span lang="en">ML &amp; automation</span><span lang="es">ML y automatización</span></h3>
+          <ul class="tags"><li>Dataiku</li><li>Power Automate</li><li>PowerApps</li><li>AppSheet</li><li>Apps Script</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="container section" aria-labelledby="cert-title">
+      <h2 id="cert-title" class="section-title"><span lang="en">Certifications</span><span lang="es">Certificaciones</span></h2>
+      <ul class="cert-grid">
+        <li class="cert">
+          <span class="cert-badge" data-issuer="ibm">IBM</span>
+          <div>
+            <h3>Supervised Machine Learning: Classification</h3>
+            <p class="muted">IBM · Coursera · <span lang="en">Nov 2024</span><span lang="es">nov 2024</span></p>
+            <a class="cert-link" href="/certificates/ibm-classification.jpg" data-cert><span lang="en">View certificate</span><span lang="es">Ver certificado</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="cert">
+          <span class="cert-badge" data-issuer="ibm">IBM</span>
+          <div>
+            <h3>Supervised Machine Learning: Regression</h3>
+            <p class="muted">IBM · Coursera · <span lang="en">Nov 2024</span><span lang="es">nov 2024</span></p>
+            <a class="cert-link" href="/certificates/ibm-regression.jpg" data-cert><span lang="en">View certificate</span><span lang="es">Ver certificado</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="cert">
+          <span class="cert-badge" data-issuer="ibm">IBM</span>
+          <div>
+            <h3>Exploratory Data Analysis for Machine Learning</h3>
+            <p class="muted">IBM · Coursera · <span lang="en">Nov 2024</span><span lang="es">nov 2024</span></p>
+            <a class="cert-link" href="/certificates/ibm-eda-ml.jpg" data-cert><span lang="en">View certificate</span><span lang="es">Ver certificado</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="cert">
+          <span class="cert-badge" data-issuer="ucd">UCD</span>
+          <div>
+            <h3>SQL for Data Science</h3>
+            <p class="muted">UC Davis · Coursera · <span lang="en">Nov 2024</span><span lang="es">nov 2024</span></p>
+            <a class="cert-link" href="/certificates/ucdavis-sql.jpg" data-cert><span lang="en">View certificate</span><span lang="es">Ver certificado</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="cert">
+          <span class="cert-badge" data-issuer="jhu">JHU</span>
+          <div>
+            <h3><span lang="en">Data Analysis Management</span><span lang="es">Gestión del análisis de datos</span></h3>
+            <p class="muted">Johns Hopkins University · Coursera · <span lang="en">Oct 2024</span><span lang="es">oct 2024</span></p>
+            <a class="cert-link" href="/certificates/jhu-data-analysis.jpg" data-cert><span lang="en">View certificate</span><span lang="es">Ver certificado</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="cert">
+          <span class="cert-badge" data-issuer="ibm">IBM</span>
+          <div>
+            <h3>Python 101 for Data Science</h3>
+            <p class="muted">IBM Developer Skills Network · <span lang="en">Feb 2024</span><span lang="es">feb 2024</span></p>
+            <a class="cert-link" href="/certificates/ibm-python.jpg" data-cert><span lang="en">View certificate</span><span lang="es">Ver certificado</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="cert">
+          <span class="cert-badge" data-issuer="platzi">P</span>
+          <div>
+            <h3><span lang="en">Basic JavaScript Programming</span><span lang="es">Curso Básico de JavaScript</span></h3>
+            <p class="muted">Platzi · <span lang="en">Jan 2023</span><span lang="es">ene 2023</span></p>
+            <a class="cert-link" href="/certificates/platzi-javascript.jpg" data-cert><span lang="en">View certificate</span><span lang="es">Ver certificado</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="cert">
+          <span class="cert-badge" data-issuer="platzi">P</span>
+          <div>
+            <h3><span lang="en">Basic Programming</span><span lang="es">Curso de Programación Básica</span></h3>
+            <p class="muted">Platzi · <span lang="en">Jul 2022</span><span lang="es">jul 2022</span></p>
+            <a class="cert-link" href="/certificates/platzi-basic-programming.jpg" data-cert><span lang="en">View certificate</span><span lang="es">Ver certificado</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Education & languages -->
+    <section class="container section two-col" aria-label="Education and languages">
+      <div class="card">
+        <h2 class="card-kicker"><span lang="en">Education</span><span lang="es">Educación</span></h2>
+        <h3><span lang="en">B.Sc. Mechatronic Engineering</span><span lang="es">Ingeniería Mecatrónica</span></h3>
+        <p class="muted">Universidad Militar Nueva Granada · Bogotá</p>
+      </div>
+      <div class="card">
+        <h2 class="card-kicker"><span lang="en">Languages</span><span lang="es">Idiomas</span></h2>
+        <h3><span lang="en">Spanish</span><span lang="es">Español</span> <span class="muted">· <span lang="en">Native</span><span lang="es">Nativo</span></span></h3>
+        <p class="muted"><span lang="en">English · Intermediate–Advanced</span><span lang="es">Inglés · Intermedio–Avanzado</span></p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container section" aria-labelledby="contact-title">
+      <div class="contact">
+        <h2 id="contact-title"><span lang="en">Let’s work together</span><span lang="es">Trabajemos juntos</span></h2>
+        <p lang="en">Open to conversations about analytics engineering, data engineering and BI roles. The fastest way to reach me is LinkedIn or email.</p>
+        <p lang="es">Abierto a conversar sobre roles de analytics engineering, ingeniería de datos y BI. La forma más rápida de contactarme es LinkedIn o correo.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/julen-daniel-caipa-garces/" target="_blank" rel="noopener">
+            <svg class="icon"><use href="#i-linkedin"/></svg><span lang="en">Message me on LinkedIn</span><span lang="es">Escríbeme por LinkedIn</span>
+          </a>
+          <a class="btn" href="mailto:caipajulen@gmail.com">
+            <svg class="icon"><use href="#i-mail"/></svg><span lang="en">Send an email</span><span lang="es">Enviar un correo</span>
+          </a>
+          <button class="btn btn-ghost" type="button" id="copy-email" data-email="caipajulen@gmail.com">
+            <svg class="icon"><use href="#i-copy"/></svg><span class="copy-label"><span lang="en">Copy email</span><span lang="es">Copiar correo</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year">2026</span> Julen Caipa</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/julen-daniel-caipa-garces/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+      <a href="https://github.com/JulenCaipa" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a>
+      <a href="mailto:caipajulen@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail"/></svg></a>
+    </div>
+  </footer>
+
+  <dialog id="cert-dialog" aria-label="Certificate">
+    <button class="dialog-close" type="button" aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    <img alt="" />
+  </dialog>
+
+  <script src="/main.js"></script>
+</body>
 </html>
